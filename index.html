@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кондитерская «Красный Мак» | Легенда Таганрога с 1961 года</title>
+  <meta name="description" content="Культовая кондитерская «Красный Мак» в Таганроге на Петровской 68А. Те самые эклеры, торты на заказ, пирожные по ГОСТу с 1961 года.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400&family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --ruby: #941b27;
+      --ruby-dark: #660e17;
+      --ruby-light: #b82837;
+      --cream-bg: #fdfaf5;
+      --cream-card: #ffffff;
+      --vanilla: #f4ece1;
+      --gold-accent: #cfa76e;
+      --text: #2c2223;
+      --text-muted: #78686a;
+      --border: rgba(148, 27, 39, 0.15);
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans: 'Rubik', sans-serif;
+      --shadow: 0 10px 30px rgba(102, 14, 23, 0.08);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--cream-bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+    }
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+    
+    /* Header */
+    header {
+      background: #fff;
+      border-bottom: 2px solid var(--ruby);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 16px 0;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    }
+    .nav { display: flex; justify-content: space-between; align-items: center; }
+    .brand {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+    }
+    .brand-title {
+      font-family: var(--font-serif);
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: var(--ruby);
+      letter-spacing: 0.04em;
+    }
+    .brand-sub {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--gold-accent);
+      font-weight: 700;
+      margin-top: -3px;
+    }
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      margin-left: 24px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--ruby); }
+    
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s;
+      font-size: 0.95rem;
+    }
+    .btn-ruby {
+      background: var(--ruby);
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(148, 27, 39, 0.3);
+    }
+    .btn-ruby:hover {
+      background: var(--ruby-dark);
+      transform: translateY(-2px);
+    }
+    .btn-outline {
+      border: 2px solid var(--ruby);
+      color: var(--ruby);
+    }
+    .btn-outline:hover {
+      background: var(--ruby);
+      color: #fff;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 100px 0 80px;
+      text-align: center;
+      background: radial-gradient(circle at 50% 20%, rgba(148, 27, 39, 0.06) 0%, transparent 70%);
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-tag {
+      display: inline-block;
+      background: rgba(148, 27, 39, 0.08);
+      color: var(--ruby);
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 6px 18px;
+      border-radius: 30px;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-family: var(--font-serif);
+      font-size: 3.8rem;
+      color: var(--ruby-dark);
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      max-width: 650px;
+      margin: 0 auto 36px;
+    }
+    .hero-btns { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+
+    /* Highlights */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin: 60px 0;
+    }
+    .stat-card {
+      background: #fff;
+      padding: 32px 24px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+    .stat-card .num {
+      font-family: var(--font-serif);
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--ruby);
+      display: block;
+      margin-bottom: 6px;
+    }
+    .stat-card h4 { font-size: 1.15rem; margin-bottom: 6px; color: var(--text); }
+    .stat-card p { font-size: 0.9rem; color: var(--text-muted); }
+
+    /* Showcase / Menu */
+    .showcase { padding: 60px 0; }
+    .sec-head { text-align: center; margin-bottom: 50px; }
+    .sec-head h2 { font-family: var(--font-serif); font-size: 2.6rem; color: var(--ruby-dark); margin-bottom: 10px; }
+    .sec-head p { color: var(--text-muted); font-size: 1.05rem; }
+
+    .pastry-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .pastry-card {
+      background: #fff;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      padding: 28px 24px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.25s;
+    }
+    .pastry-card:hover { transform: translateY(-4px); border-color: var(--ruby); }
+    .pastry-icon { font-size: 2.4rem; margin-bottom: 14px; display: block; }
+    .pastry-card h3 { font-family: var(--font-serif); font-size: 1.35rem; margin-bottom: 8px; color: var(--ruby-dark); }
+    .pastry-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 20px; }
+    .pastry-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f0e9e1; padding-top: 14px; }
+    .pastry-price { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 800; color: var(--ruby); }
+    .pastry-badge { font-size: 0.75rem; background: var(--vanilla); padding: 4px 10px; border-radius: 20px; font-weight: 600; color: var(--text); }
+
+    /* Custom Cakes */
+    .cakes-banner {
+      background: linear-gradient(135deg, #fff, #f9f1e8);
+      border: 2px solid var(--ruby);
+      border-radius: 20px;
+      padding: 50px 40px;
+      margin: 80px 0;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: center;
+      box-shadow: var(--shadow);
+    }
+    .cakes-info h2 { font-family: var(--font-serif); font-size: 2.5rem; color: var(--ruby-dark); margin-bottom: 16px; }
+    .cakes-info p { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 24px; }
+
+    /* Contacts */
+    .location-card {
+      background: #fff;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      padding: 48px 36px;
+      margin-bottom: 80px;
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .loc-content h2 { font-family: var(--font-serif); font-size: 2.4rem; color: var(--ruby-dark); margin-bottom: 20px; }
+    .loc-row { margin-bottom: 16px; font-size: 1rem; color: var(--text-muted); }
+    .loc-row strong { color: var(--text); display: block; margin-bottom: 2px; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 30px 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      background: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.5rem; }
+      .stats-row { grid-template-columns: 1fr; }
+      .pastry-grid { grid-template-columns: 1fr; }
+      .cakes-banner { grid-template-columns: 1fr; padding: 30px 20px; }
+      .location-card { grid-template-columns: 1fr; padding: 30px 20px; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav">
+      <a href="#" class="brand">
+        <span class="brand-title">КРАСНЫЙ МАК</span>
+        <span class="brand-sub">КОНДИТЕРСКАЯ • ОСНОВАНА В 1961</span>
+      </a>
+      <div class="nav-links">
+        <a href="#about">О нас</a>
+        <a href="#menu">Витрина</a>
+        <a href="#cakes">Торты на заказ</a>
+        <a href="#contacts">Контакты</a>
+        <a href="tel:+78634394362" class="btn btn-ruby" style="margin-left: 20px;">Позвонить</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <span class="hero-tag">Город Таганрог • Петровская, 68А</span>
+        <h1>Тот самый вкус детства.<br>Сладкая история города.</h1>
+        <p>Более 60 лет радуем жителей и гостей Таганрога настоящими эклерами по советскому ГОСТу, авторскими пирожными и праздничными тортами.</p>
+        <div class="hero-btns">
+          <a href="#menu" class="btn btn-ruby">Смотреть витрину</a>
+          <a href="#cakes" class="btn btn-outline">Заказать торт</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="stats-row" id="about">
+        <div class="stat-card">
+          <span class="num">1961</span>
+          <h4>Год основания</h4>
+          <p>Культовая городская кондитерская, ставшая визитной карточкой Таганрога.</p>
+        </div>
+        <div class="stat-card">
+          <span class="num">100%</span>
+          <h4>Натуральные продукты</h4>
+          <p>Настоящее сливочное масло, сгущенное молоко, свежие ягоды без дешёвых заменителей.</p>
+        </div>
+        <div class="stat-card">
+          <span class="num">50+</span>
+          <h4>Видов десертов</h4>
+          <p>От любимых с детства эклеров и корзиночек до многоярусных свадебных тортов.</p>
+        </div>
+      </div>
+
+      <!-- Меню сладостей -->
+      <section class="showcase" id="menu">
+        <div class="sec-head">
+          <span style="color: var(--ruby); text-transform: uppercase; letter-spacing: 0.15em; font-size: 0.85rem; font-weight: 700;">Наши хиты</span>
+          <h2>Любимые пирожные таганрожцев</h2>
+          <p>Приготовлено вручную нашими кондитерами каждое утро</p>
+        </div>
+
+        <div class="pastry-grid">
+          <div class="pastry-card">
+            <div>
+              <span class="pastry-icon">🥖</span>
+              <h3>Фирменный Эклер</h3>
+              <p>Те самые заварные эклеры с нежнейшим масляно-заварным кремом и шоколадной глазурью.</p>
+            </div>
+            <div class="pastry-footer">
+              <span class="pastry-price">120 ₽</span>
+              <span class="pastry-badge">Легенда</span>
+            </div>
+          </div>
+
+          <div class="pastry-card">
+            <div>
+              <span class="pastry-icon">🧁</span>
+              <h3>Корзиночка с кремом</h3>
+              <p>Рассыпчатое песочное тесто, слой натурального повидла и воздушная шапочка белкового крема.</p>
+            </div>
+            <div class="pastry-footer">
+              <span class="pastry-price">110 ₽</span>
+              <span class="pastry-badge">Хит</span>
+            </div>
+          </div>
+
+          <div class="pastry-card">
+            <div>
+              <span class="pastry-icon">🥔</span>
+              <h3>Пирожное «Картошка»</h3>
+              <p>Классический рецепт из бисквитной крошки, какао и сгущенного молока по ГОСТу.</p>
+            </div>
+            <div class="pastry-footer">
+              <span class="pastry-price">95 ₽</span>
+              <span class="pastry-badge">Традиции</span>
+            </div>
+          </div>
+
+          <div class="pastry-card">
+            <div>
+              <span class="pastry-icon">🎂</span>
+              <h3>Торт «Прага» (кусочек)</h3>
+              <p>Насыщенные шоколадные бисквиты с кремом «Пражский» под зеркальной шоколадной помадкой.</p>
+            </div>
+            <div class="pastry-footer">
+              <span class="pastry-price">160 ₽</span>
+              <span class="pastry-badge">Шоколад</span>
+            </div>
+          </div>
+
+          <div class="pastry-card">
+            <div>
+              <span class="pastry-icon">🥐</span>
+              <h3>Слоёная трубочка</h3>
+              <p>Хрустящее слоёное тесто с нежнейшим сливочно-белковым кремом, посыпанное сахарной пудрой.</p>
+            </div>
+            <div class="pastry-footer">
+              <span class="pastry-price">115 ₽</span>
+              <span class="pastry-badge">Свежее</span>
+            </div>
+          </div>
+
+          <div class="pastry-card">
+            <div>
+              <span class="pastry-icon">🍯</span>
+              <h3>Медовик Домашний</h3>
+              <p>Тончайшие медовые коржи, пропитанные натуральной деревенской сметаной.</p>
+            </div>
+            <div class="pastry-footer">
+              <span class="pastry-price">150 ₽</span>
+              <span class="pastry-badge">Классика</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Торты на заказ -->
+      <div class="cakes-banner" id="cakes">
+        <div class="cakes-info">
+          <h2>Торты на заказ к вашему празднику</h2>
+          <p>Свадьбы, детские дни рождения, юбилеи и корпоративы. Воплотим любое оформление, надпись и фигурки. Заказ от 1.5 кг.</p>
+          <a href="tel:+78634394362" class="btn btn-ruby">Заказать по телефону: +7 (8634) 39-43-62</a>
+        </div>
+        <div style="text-align: center; font-size: 5rem;">
+          🎂✨
+        </div>
+      </div>
+
+      <!-- Контакты -->
+      <div class="location-card" id="contacts">
+        <div class="loc-content">
+          <h2>Ждём вас в гости</h2>
+          <div class="loc-row">
+            <strong>📍 Адрес:</strong>
+            г. Таганрог, ул. Петровская, 68А (напротив сквера)
+          </div>
+          <div class="loc-row">
+            <strong>🕒 График работы:</strong>
+            Ежедневно: с 08:00 до 20:00
+          </div>
+          <div class="loc-row">
+            <strong>📞 Телефон для справок и заказов:</strong>
+            +7 (8634) 39-43-62
+          </div>
+          <div style="margin-top: 24px;">
+            <a href="https://yandex.ru/maps/org/1096889887" target="_blank" class="btn btn-ruby">Маршрут на Яндекс.Картах</a>
+          </div>
+        </div>
+        <div style="background: var(--vanilla); border-radius: 14px; padding: 32px; text-align: center;">
+          <h3 style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--ruby-dark); margin-bottom: 10px;">Кофе и чай в зале</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">У нас можно выпить чашечку горячего кофе или чая за столиком прямо с любимым свежим пирожным.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Кондитерская «Красный Мак». Таганрог. Демонстрационный прототип сайта.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
